@@ -4,7 +4,7 @@ int main() {
 char estado, estado2;
 char codcarta [5], codcarta2[5], nomecidade[30], nomecidade2[30] ;
 int populacao, populacao2, pontosturisticos, pontosturisticos2;
-float area, area2, pib, pib2;
+float area, area2, pib, pib2, densidade, densidade2, pibcapita, pibcapita2;
 
 //Coletando os dados da primeira carta!
 
@@ -26,10 +26,10 @@ printf("Digite o número da população:\n");
 scanf("%d", &populacao);
 
 printf("Digite a área: km2\n");
-scanf("%f", &area);
+scanf(" %.2f", &area);
 
 printf("Digite o PIB: \n");
-scanf("%f", &pib);
+scanf(" %.2f", &pib);
 
 printf("Digite o número de pontos turisticos: \n");
 scanf("%d", &pontosturisticos);
@@ -53,13 +53,19 @@ printf("Digite o número da população:\n");
 scanf("%d", &populacao2);
 
 printf("Digite a área: km2\n");
-scanf("%f", &area2);
+scanf(" %.2f", &area2);
 
 printf("Digite o PIB: \n");
-scanf("%f", &pib2);
+scanf(" %.2f", &pib2);
 
 printf("Digite o número de pontos turisticos: \n");
 scanf("%d", &pontosturisticos2);
+
+//Desafio Aventureiro
+densidade = (float)populacao / area;
+densidade2 = (float)populacao2 / area2;
+pibcapita = pib / (float)populacao;
+pibcapita2 = pib2 / (float)populacao2;
 
 //Imprimindo o resultado
 // Carta 01
@@ -70,6 +76,8 @@ printf("População: %d\n", populacao);
 printf("Área: %f km2\n", area);
 printf("PIB: %f\n", pib);
 printf("Número de pontos turisticos: %d\n", pontosturisticos);
+printf("Densidade Populacional: %.2f\n", densidade);
+printf("PIB per Capita: %.2f\n", pibcapita);
 //Cartas 02
 printf("***Carta 02***\nEstado: %c\n", estado2);
 printf("Código da carta: %c%s\n", estado2, codcarta2);
@@ -78,7 +86,8 @@ printf("População: %d\n", populacao2);
 printf("Área: %f km2\n", area2);
 printf("PIB: %f\n", pib2);
 printf("Número de pontos turisticos: %d\n", pontosturisticos2);
-
+printf("Densidade Populacional: %.2f\n", densidade2);
+printf("PIB per Capita: %.2f\n", pibcapita2);
 
 return 0;
 
