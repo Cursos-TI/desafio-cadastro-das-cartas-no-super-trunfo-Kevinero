@@ -1,77 +1,85 @@
-#include <stdio.h>
-
+#include  <stdio.h>
 int main() {
 
-    // Todos os variaveis com final "1" é para carta 01 e Final "2" é para segunda carta.
-    char estado1, estado2; 
-    char codcarta1[4], nomecidade1[30], codcarta2[4], nomecidade2[30]; 
-    int populacao1, pontos1, populacao2, pontos2; 
-    float area1, pib1, area2, pib2;
+char estado, estado2;
+char codcarta [5], codcarta2[5], nomecidade[30], nomecidade2[30] ;
+int populacao, populacao2, pontosturisticos, pontosturisticos2;
+float area, area2, pib, pib2;
 
-    printf("Bem vindo ao jogo Super Trunfo!!!\nVamos cadastrar a priemira carta do jogo.\n");
+//Coletando os dados da primeira carta!
 
-    printf("Digite Uma Letra Entre 'A' a 'H': \n");
-    scanf(" %c", &estado1);
-
-    printf("Digite O Código Da Carta Entre Os Números 1 a 4: \n");
-    scanf(" %s", &codcarta1);
-   
-    printf("Digite Nome De Uma Cidade Deste Estado: \n");
-    scanf("%s", &nomecidade1);
-
-    printf("Digite O Número De População Desta Cidade: \n");
-    scanf("%d", &populacao1);
-
-    printf("Digite A Área em km2: \n");
-    scanf("%f", &area1);
-
-    printf("Digite o PIB desta cidade: \n");
-    scanf("%f", &pib1);
-
-    printf("Digite o Número De Pontos Turisticos: \n");
-    scanf("%d", &pontos1);
-
-    printf("Agora Vamos Cadastrar a Segunda Carta!\n");
-
-    printf("Digite Uma Letra Entre 'A' a 'H': \n");
-    scanf(" %c", &estado2);
-
-    printf("Digite O Código Da Carta Entre Os Números 1 a 4: \n");
-    scanf(" %s", &codcarta2);
-   
-    printf("Digite Nome De Uma Cidade Deste Estado: \n");
-    scanf("%s", &nomecidade2);
-
-    printf("Digite O Número De População Desta Cidade: \n");
-    scanf("%d", &populacao2);
-
-    printf("Digite A Área em km2: \n");
-    scanf("%f", &area2);
-
-    printf("Digite o PIB desta cidade: \n");
-    scanf("%f", &pib2);
-
-    printf("Digite o Número De Pontos Turisticos: \n");
-    scanf("%d", &pontos2);
-
-printf("Resultado\n");//Resultado dos comandos.
-
-printf("Carta 1\nEstado: %c\n", estado1);
-printf("Codigo Da Carta: %c%s\n", estado1, codcarta1);
-printf("Nome Cidade: %s\n", nomecidade1);
-printf("População: %d\n", populacao1);
-printf("Área: %f KM2\n", area1);
-printf("PIB: %f Bilhões De Reais\n", pib1);
-printf("Número De Pontos Turisticos: %d\n", pontos1);
+printf("**BEM VINDO AO JOGO SUPER TRUNFO***\nVamos cadastrar a primeira carta!\nDigite uma letra de 'A' até 'H':\n");
+scanf(" %c", &estado);
 
 
-printf("Carta 2\nEstado: %c\n", estado2);
-printf("Codigo Da Carta: %c%s\n", estado2, codcarta2);
-printf("Nome Cidade: %s\n", nomecidade2);
+printf("Digite entre 01 até 04:\n");
+scanf("%s", &codcarta);
+
+getchar();
+
+printf("Digite o nome da cidade:\n");
+fgets(nomecidade, 30, stdin);
+
+nomecidade[strcspn(nomecidade, "\n")] = 0;
+
+printf("Digite o número da população:\n");
+scanf("%d", &populacao);
+
+printf("Digite a área: km2\n");
+scanf("%f", &area);
+
+printf("Digite o PIB: \n");
+scanf("%f", &pib);
+
+printf("Digite o número de pontos turisticos: \n");
+scanf("%d", &pontosturisticos);
+
+//Coletando os dados da segunda carta!!
+
+printf("Agora vamos cadastrar a Segunda carta!!!\nDigite uma letra de 'A' até 'H':\n");
+scanf(" %c", &estado2);
+
+printf("Digite entre 01 até 04:\n");
+scanf("%s", &codcarta2);
+
+getchar();
+
+printf("Digite o nome da cidade:\n");
+fgets(nomecidade2, 30, stdin);
+
+nomecidade2[strcspn(nomecidade2, "\n")] = 0;
+
+printf("Digite o número da população:\n");
+scanf("%d", &populacao2);
+
+printf("Digite a área: km2\n");
+scanf("%f", &area2);
+
+printf("Digite o PIB: \n");
+scanf("%f", &pib2);
+
+printf("Digite o número de pontos turisticos: \n");
+scanf("%d", &pontosturisticos2);
+
+//Imprimindo o resultado
+// Carta 01
+printf("***Carta 01***\nEstado: %c\n", estado);
+printf("Código da carta: %c%s\n", estado, codcarta);
+printf("Nome da cidade: %s\n", nomecidade);
+printf("População: %d\n", populacao);
+printf("Área: %f km2\n", area);
+printf("PIB: %f\n", pib);
+printf("Número de pontos turisticos: %d\n", pontosturisticos);
+//Cartas 02
+printf("***Carta 02***\nEstado: %c\n", estado2);
+printf("Código da carta: %c%s\n", estado2, codcarta2);
+printf("Nome da cidade: %s\n", nomecidade2);
 printf("População: %d\n", populacao2);
-printf("Area Quadrada km: %f\n", area2);
+printf("Área: %f km2\n", area2);
 printf("PIB: %f\n", pib2);
-printf("Número De Pontos Turisticos: %d\n", pontos2);
+printf("Número de pontos turisticos: %d\n", pontosturisticos2);
 
-    return 0;
+
+return 0;
+
 }
