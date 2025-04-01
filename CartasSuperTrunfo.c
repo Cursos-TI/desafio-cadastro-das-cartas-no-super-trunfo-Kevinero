@@ -13,7 +13,7 @@ scanf(" %c", &estado);
 
 
 printf("Digite entre 01 até 04:\n");
-scanf("%s", &codcarta);
+scanf(" %s", &codcarta);
 
 getchar();
 
@@ -23,16 +23,18 @@ fgets(nomecidade, 30, stdin);
 nomecidade[strcspn(nomecidade, "\n")] = 0;
 
 printf("Digite o número da população:\n");
-scanf("%d", &populacao);
+scanf(" %d", &populacao);
 
 printf("Digite a área: km2\n");
-scanf(" %.2f", &area);
+scanf(" %f", &area);
+
 
 printf("Digite o PIB: \n");
-scanf(" %.2f", &pib);
+scanf(" %f", &pib);
+
 
 printf("Digite o número de pontos turisticos: \n");
-scanf("%d", &pontosturisticos);
+scanf(" %d", &pontosturisticos);
 
 //Coletando os dados da segunda carta!!
 
@@ -40,7 +42,7 @@ printf("Agora vamos cadastrar a Segunda carta!!!\nDigite uma letra de 'A' até '
 scanf(" %c", &estado2);
 
 printf("Digite entre 01 até 04:\n");
-scanf("%s", &codcarta2);
+scanf(" %s", &codcarta2);
 
 getchar();
 
@@ -50,16 +52,17 @@ fgets(nomecidade2, 30, stdin);
 nomecidade2[strcspn(nomecidade2, "\n")] = 0;
 
 printf("Digite o número da população:\n");
-scanf("%d", &populacao2);
+scanf(" %d", &populacao2);
 
 printf("Digite a área: km2\n");
-scanf(" %.2f", &area2);
+scanf(" %f", &area2);
+
 
 printf("Digite o PIB: \n");
-scanf(" %.2f", &pib2);
+scanf(" %f", &pib2);
 
 printf("Digite o número de pontos turisticos: \n");
-scanf("%d", &pontosturisticos2);
+scanf(" %d", &pontosturisticos2);
 
 //Desafio Aventureiro
 densidade = (float)populacao / area;
@@ -73,8 +76,8 @@ printf("***Carta 01***\nEstado: %c\n", estado);
 printf("Código da carta: %c%s\n", estado, codcarta);
 printf("Nome da cidade: %s\n", nomecidade);
 printf("População: %d\n", populacao);
-printf("Área: %f km2\n", area);
-printf("PIB: %f\n", pib);
+printf("Área: %.2f km2\n", area);
+printf("PIB: %.2f\n", pib);
 printf("Número de pontos turisticos: %d\n", pontosturisticos);
 printf("Densidade Populacional: %.2f\n", densidade);
 printf("PIB per Capita: %.2f\n", pibcapita);
@@ -83,8 +86,8 @@ printf("***Carta 02***\nEstado: %c\n", estado2);
 printf("Código da carta: %c%s\n", estado2, codcarta2);
 printf("Nome da cidade: %s\n", nomecidade2);
 printf("População: %d\n", populacao2);
-printf("Área: %f km2\n", area2);
-printf("PIB: %f\n", pib2);
+printf("Área: %.2f km2\n", area2);
+printf("PIB: %.2f\n", pib2);
 printf("Número de pontos turisticos: %d\n", pontosturisticos2);
 printf("Densidade Populacional: %.2f\n", densidade2);
 printf("PIB per Capita: %.2f\n", pibcapita2);
